@@ -1,3 +1,38 @@
-Team members: Kelechi Nzerem and Oluwaseun Ogunfile
-Email data seacrh tool - computer forensic
+Team members: Oluwaseun Ogunfile and Kelechi Nzerem 
+Email data seacrh tool - Computer forensics
 Programming language used- python
+
+
+The three items below (A,B and C) states what the functions do. This was a computer forensic project given to me 
+A********************************************************
+Function 1: performs word seacrh under the foolowing conditions
+1) case insensity
+2) does not perform fuzyy or partial matching.
+3) ignores duplicate search term and term order.
+4) matching must be exact.
+For example: 
+enron_search term_search MONEY tHe monEY
+ will perform "enron_search term_search the money"
+1. Guy Incharge <incharge@enron.com> Mon, 18 Mar 1995 14:47:38 -0500
+2. Peon Smith <psmith@enron.com> Tue, 19 Mar 1995 14:47:38 -0500
+3. Guy Incharge <incharge@enron.com> Wed, 20 Mar 1995 14:47:38 -0500
+4. Peon Smith <psmith@enron.com> Thu, 21 Mar 1995 14:47:38 -0500
+Results found: 4
+B************************************************************
+Function 2:  obtains all the emails sent and received by a given person:
+For Example: 
+• enron_search address_search last_name first_name
+where last_name and first_name belong to the person you are trying to obtain the email addresses from. As a result, you will list the information of each obtained address as follows:
+$ enron_search address_search carlos rubio-medrano
+1. <carlos.rubiomedrano@tamucc.edu>
+2. <crubiome@asu.edu>
+Results found: 2
+C************************************************************
+Function 3: Implements a new command to obtain all the emails exchanged by two people, regardless of who initiated the communication in the first place:
+For example:
+enron_search interaction_search address_1 address_2
+where address_1 and address_2 identify the two people interacting with each other. The results should be displayed back to the screen as follows:
+$ enron_search interaction_search crubiome@asu.edu dean@tamucc.edu
+1. <crubiome@asu.edu> -> <dean@tamucc.edu> [Subject: Inquiry on Open Position] Mon, 18 Mar 2020 14:47:38 -0500
+2. <dean@tamucc.edu> -> <crubiome@asu.edu> [Subject: Re: Inquiry on Open Position] Mon, 18 Mar 2020 14:57:38 -0500
+Results found: 2
